@@ -20,7 +20,7 @@ export default Route.extend(ModelBoundaryRoute, {
     this.get('console').set('isOpen', false);
     this.get('console').clearLog(true);
     this.clearModelCache();
-    this.replaceWith('vault.cluster');
+    this.replaceWith('vault.cluster.auth', { queryParams: { redirect_to: '' } });
     this.get('flashMessages').clearMessages();
     this.get('permissions').reset();
   },
